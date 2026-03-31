@@ -35,3 +35,27 @@ The dataset includes customer-level information:
 *payment_method – Payment mode
 
 *churn – Customer status (Yes/No)
+
+📊 Key Performance Indicators (KPIs)
+
+*Churn Rate
+
+*Customer Lifetime (Tenure)
+
+*Average Monthly Revenue
+
+Revenue Loss due to Churn
+
+🔍 Key Analysis
+
+*Performed data exploration and cleaning using SQL
+
+*Calculated churn rate and revenue impact
+
+*Analyzed churn across contract types, tenure, and payment methods
+
+*Identified high-risk customers using filtering and conditional logic
+
+*Applied customer segmentation using CASE statements
+
+*Utilized window functions for advanced analysis
