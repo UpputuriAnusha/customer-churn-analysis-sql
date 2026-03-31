@@ -81,3 +81,7 @@ Revenue Loss due to Churn
 *Offer personalized pricing or discounts for high-risk customers
 
 *Implement customer loyalty programs to reduce churn
+
+Conclusion
+
+Through this project, I utilized SQL to analyze customer churn data, identify high-risk segments, and generate actionable insights. The analysis highlights the importance of customer retention strategies and demonstrates how data-driven decision-making can reduce churn and improve business performance.
