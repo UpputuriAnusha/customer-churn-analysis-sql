@@ -59,3 +59,25 @@ Revenue Loss due to Churn
 *Applied customer segmentation using CASE statements
 
 *Utilized window functions for advanced analysis
+
+💡 Key Insights
+
+*Customers with month-to-month contracts show higher churn rates
+
+*Customers with low tenure (<12 months) are more likely to churn
+
+*High monthly charges increase churn probability
+
+*Long-term contract customers exhibit strong retention behavior
+
+*High-value customers contribute significantly to revenue loss when they churn
+
+📈 Business Recommendations
+
+*Promote long-term contracts to improve retention
+
+*Target new customers with onboarding and engagement strategies
+
+*Offer personalized pricing or discounts for high-risk customers
+
+*Implement customer loyalty programs to reduce churn
