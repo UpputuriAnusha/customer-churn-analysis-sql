@@ -8,8 +8,11 @@ Customer churn is a major challenge for businesses. Losing customers directly im
 This project aims to:
 
 *Identify factors contributing to churn
+
 *Detect high-risk customers
+
 *Provide data-driven retention strategies
+
 
 🛠️ Tools & Technologies
 
