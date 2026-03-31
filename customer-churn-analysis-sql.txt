@@ -1,0 +1,252 @@
+CREATE DATABASE churn_db;
+USE churn_db;
+
+CREATE TABLE customer_churn (
+    customer_id VARCHAR(10),
+    gender VARCHAR(10),
+    tenure INT,
+    contract_type VARCHAR(20),
+    monthly_charges DECIMAL(10,2),
+    total_charges DECIMAL(10,2),
+    payment_method VARCHAR(50),
+    churn VARCHAR(5)
+);
+select*from customer_churn;
+INSERT INTO customer_churn VALUES
+('C001','Male',12,'Month-to-month',45.50,546.00,'Credit Card','Yes'),
+('C002','Female',24,'One year',60.00,1440.00,'Debit Card','No'),
+('C003','Male',5,'Month-to-month',30.20,151.00,'UPI','Yes'),
+('C004','Female',36,'Two year',80.75,2907.00,'Net Banking','No'),
+('C005','Male',48,'Two year',90.10,4324.80,'Credit Card','No'),
+('C006','Female',2,'Month-to-month',25.00,50.00,'UPI','Yes'),
+('C007','Male',60,'Two year',100.00,6000.00,'Debit Card','No'),
+('C008','Female',15,'One year',55.00,825.00,'Net Banking','No'),
+('C009','Male',8,'Month-to-month',40.00,320.00,'Credit Card','Yes'),
+('C010','Female',20,'One year',65.50,1310.00,'UPI','No'),
+('C011','Male',3,'Month-to-month',20.00,60.00,'Debit Card','Yes'),
+('C012','Female',72,'Two year',110.00,7920.00,'Credit Card','No'),
+('C013','Male',10,'Month-to-month',35.00,350.00,'UPI','Yes'),
+('C014','Female',18,'One year',70.00,1260.00,'Net Banking','No'),
+('C015','Male',25,'One year',75.00,1875.00,'Credit Card','No'),
+('C016','Female',6,'Month-to-month',28.00,168.00,'UPI','Yes'),
+('C017','Male',40,'Two year',95.00,3800.00,'Debit Card','No'),
+('C018','Female',50,'Two year',105.00,5250.00,'Net Banking','No'),
+('C019','Male',7,'Month-to-month',33.00,231.00,'Credit Card','Yes'),
+('C020','Female',22,'One year',68.00,1496.00,'UPI','No'),
+('C021','Male',1,'Month-to-month',22.00,22.00,'Debit Card','Yes'),
+('C022','Female',30,'Two year',85.00,2550.00,'Credit Card','No'),
+('C023','Male',14,'One year',58.00,812.00,'Net Banking','No'),
+('C024','Female',9,'Month-to-month',38.00,342.00,'UPI','Yes'),
+('C025','Male',55,'Two year',98.00,5390.00,'Debit Card','No'),
+('C026','Female',4,'Month-to-month',26.00,104.00,'Credit Card','Yes'),
+('C027','Male',28,'One year',72.00,2016.00,'Net Banking','No'),
+('C028','Female',33,'Two year',88.00,2904.00,'UPI','No'),
+('C029','Male',11,'Month-to-month',36.00,396.00,'Debit Card','Yes'),
+('C030','Female',19,'One year',66.00,1254.00,'Credit Card','No'),
+('C031','Male',45,'Two year',92.00,4140.00,'Net Banking','No'),
+('C032','Female',13,'Month-to-month',42.00,546.00,'UPI','Yes'),
+('C033','Male',17,'One year',63.00,1071.00,'Debit Card','No'),
+('C034','Female',21,'One year',67.00,1407.00,'Credit Card','No'),
+('C035','Male',6,'Month-to-month',29.00,174.00,'UPI','Yes'),
+('C036','Female',39,'Two year',94.00,3666.00,'Debit Card','No'),
+('C037','Male',52,'Two year',102.00,5304.00,'Net Banking','No'),
+('C038','Female',16,'One year',59.00,944.00,'Credit Card','No'),
+('C039','Male',8,'Month-to-month',34.00,272.00,'UPI','Yes'),
+('C040','Female',27,'One year',71.00,1917.00,'Debit Card','No'),
+('C041','Male',2,'Month-to-month',23.00,46.00,'Credit Card','Yes'),
+('C042','Female',34,'Two year',89.00,3026.00,'Net Banking','No'),
+('C043','Male',29,'One year',73.00,2117.00,'UPI','No'),
+('C044','Female',12,'Month-to-month',44.00,528.00,'Debit Card','Yes'),
+('C045','Male',41,'Two year',96.00,3936.00,'Credit Card','No'),
+('C046','Female',23,'One year',69.00,1587.00,'UPI','No'),
+('C047','Male',5,'Month-to-month',31.00,155.00,'Debit Card','Yes'),
+('C048','Female',37,'Two year',91.00,3367.00,'Net Banking','No'),
+('C049','Male',26,'One year',74.00,1924.00,'Credit Card','No'),
+('C050','Female',7,'Month-to-month',32.00,224.00,'UPI','Yes');
+select*from customer_churn;
+INSERT INTO customer_churn VALUES
+('C051','Male',9,'Month-to-month',37.00,333.00,'UPI','Yes'),
+('C052','Female',42,'Two year',93.00,3906.00,'Credit Card','No'),
+('C053','Male',31,'One year',70.00,2170.00,'Debit Card','No'),
+('C054','Female',6,'Month-to-month',29.50,177.00,'Net Banking','Yes'),
+('C055','Male',18,'One year',64.00,1152.00,'UPI','No'),
+('C056','Female',50,'Two year',99.00,4950.00,'Credit Card','No'),
+('C057','Male',3,'Month-to-month',24.00,72.00,'Debit Card','Yes'),
+('C058','Female',27,'One year',68.00,1836.00,'UPI','No'),
+('C059','Male',14,'Month-to-month',41.00,574.00,'Credit Card','Yes'),
+('C060','Female',35,'Two year',90.00,3150.00,'Net Banking','No'),
+('C061','Male',21,'One year',66.00,1386.00,'UPI','No'),
+('C062','Female',4,'Month-to-month',27.00,108.00,'Debit Card','Yes'),
+('C063','Male',46,'Two year',94.00,4324.00,'Credit Card','No'),
+('C064','Female',12,'Month-to-month',43.00,516.00,'UPI','Yes'),
+('C065','Male',29,'One year',71.00,2059.00,'Net Banking','No'),
+('C066','Female',55,'Two year',101.00,5555.00,'Credit Card','No'),
+('C067','Male',8,'Month-to-month',35.00,280.00,'Debit Card','Yes'),
+('C068','Female',33,'Two year',88.00,2904.00,'UPI','No'),
+('C069','Male',16,'One year',60.00,960.00,'Credit Card','No'),
+('C070','Female',2,'Month-to-month',22.00,44.00,'Net Banking','Yes'),
+('C071','Male',39,'Two year',92.00,3588.00,'Debit Card','No'),
+('C072','Female',11,'Month-to-month',39.00,429.00,'UPI','Yes'),
+('C073','Male',24,'One year',67.00,1608.00,'Credit Card','No'),
+('C074','Female',48,'Two year',97.00,4656.00,'Net Banking','No'),
+('C075','Male',5,'Month-to-month',30.00,150.00,'UPI','Yes'),
+('C076','Female',28,'One year',69.00,1932.00,'Debit Card','No'),
+('C077','Male',52,'Two year',103.00,5356.00,'Credit Card','No'),
+('C078','Female',7,'Month-to-month',32.00,224.00,'UPI','Yes'),
+('C079','Male',19,'One year',65.00,1235.00,'Net Banking','No'),
+('C080','Female',41,'Two year',95.00,3895.00,'Credit Card','No'),
+('C081','Male',13,'Month-to-month',42.00,546.00,'Debit Card','Yes'),
+('C082','Female',34,'Two year',89.00,3026.00,'UPI','No'),
+('C083','Male',22,'One year',68.00,1496.00,'Credit Card','No'),
+('C084','Female',3,'Month-to-month',25.00,75.00,'Net Banking','Yes'),
+('C085','Male',45,'Two year',96.00,4320.00,'UPI','No'),
+('C086','Female',17,'One year',62.00,1054.00,'Debit Card','No'),
+('C087','Male',6,'Month-to-month',31.00,186.00,'Credit Card','Yes'),
+('C088','Female',37,'Two year',91.00,3367.00,'Net Banking','No'),
+('C089','Male',26,'One year',74.00,1924.00,'UPI','No'),
+('C090','Female',1,'Month-to-month',21.00,21.00,'Debit Card','Yes'),
+('C091','Male',49,'Two year',98.00,4802.00,'Credit Card','No'),
+('C092','Female',20,'One year',66.00,1320.00,'UPI','No'),
+('C093','Male',10,'Month-to-month',36.00,360.00,'Net Banking','Yes'),
+('C094','Female',36,'Two year',90.00,3240.00,'Credit Card','No'),
+('C095','Male',15,'One year',61.00,915.00,'UPI','No'),
+('C096','Female',5,'Month-to-month',28.00,140.00,'Debit Card','Yes'),
+('C097','Male',44,'Two year',95.00,4180.00,'Credit Card','No'),
+('C098','Female',23,'One year',67.00,1541.00,'Net Banking','No'),
+('C099','Male',7,'Month-to-month',33.00,231.00,'UPI','Yes'),
+('C100','Female',32,'Two year',88.00,2816.00,'Debit Card','No');
+# 1.View all data
+select*from customer_churn;
+
+# Check NULL values
+SELECT * 
+FROM customer_churn
+WHERE customer_id IS NULL;
+
+# Remove duplicates
+SELECT customer_id, COUNT(*) 
+FROM customer_churn
+GROUP BY customer_id
+HAVING COUNT(*) > 1;
+
+# Total number of customers
+SELECT COUNT(*) AS TOTAL_CUSTOMERS from CUSTOMER_CHURN;
+
+# Unique contract types
+SELECT DISTINCT ( CONTRACT_TYPE)FROM CUSTOMER_CHURN;
+
+# Customers who churned
+SELECT*FROM CUSTOMER_CHURN WHERE CHURN="YES";
+
+# Count of churn vs non-churn
+SELECT CHURN,COUNT(*) AS TOTAL FROM CUSTOMER_CHURN group by CHURN;
+
+# Churn rate (%)
+SELECT 
+    ROUND(SUM(CASE WHEN churn='Yes' THEN 1 ELSE 0 END)*100.0/COUNT(*),2) AS churn_rate
+FROM customer_churn;
+
+# Churn by contract type
+SELECT contract_type, churn, COUNT(*) AS total
+FROM customer_churn
+GROUP BY contract_type, churn
+ORDER BY contract_type;
+
+# Average monthly charges by churn
+SELECT churn, AVG(monthly_charges) AS avg_charges
+FROM customer_churn
+GROUP BY churn;
+
+# Payment method usage
+SELECT payment_method, COUNT(*) AS total_customers
+FROM customer_churn
+GROUP BY payment_method
+ORDER BY total_customers DESC;
+
+# Average tenure of churned customers
+SELECT AVG(tenure) AS avg_tenure
+FROM customer_churn
+WHERE churn = 'Yes';
+
+# High-risk customers (high charges + low tenure)
+SELECT *
+FROM customer_churn
+WHERE monthly_charges > 80 AND tenure < 12 AND churn='Yes';
+
+# Churn percentage by contract type
+SELECT contract_type,
+       ROUND(SUM(CASE WHEN churn='Yes' THEN 1 ELSE 0 END)*100.0/COUNT(*),2) AS churn_percentage
+FROM customer_churn
+GROUP BY contract_type;
+
+# Top 5 highest paying customers
+SELECT *
+FROM customer_churn
+ORDER BY total_charges DESC
+LIMIT 5;
+
+# Rank customers by total charges
+SELECT customer_id, total_charges,
+       RANK() OVER (ORDER BY total_charges DESC) AS rank_position
+FROM customer_churn;
+
+# Running total of revenue
+SELECT customer_id, total_charges,
+       SUM(total_charges) OVER (ORDER BY customer_id) AS running_total
+FROM customer_churn;
+
+# Why customers are leaving?
+SELECT contract_type, AVG(monthly_charges) AS avg_charges, COUNT(*) AS total
+FROM customer_churn
+WHERE churn='Yes'
+GROUP BY contract_type;
+
+# Which customers should company target?
+SELECT *
+FROM customer_churn
+WHERE tenure < 6 AND monthly_charges > 70;
+
+# Loyal customers (low churn risk)
+SELECT *
+FROM customer_churn
+WHERE tenure > 24 AND churn='No';
+
+# Best payment method (least churn)
+SELECT payment_method,
+       SUM(CASE WHEN churn='Yes' THEN 1 ELSE 0 END) AS churned,
+       COUNT(*) AS total
+FROM customer_churn
+GROUP BY payment_method;
+
+# Customer segmentation
+SELECT customer_id,
+       CASE 
+           WHEN tenure < 12 THEN 'New Customer'
+           WHEN tenure BETWEEN 12 AND 36 THEN 'Regular Customer'
+           ELSE 'Loyal Customer'
+       END AS customer_segment
+FROM customer_churn;
+
+# Churn vs Revenue impact
+SELECT churn,
+       SUM(total_charges) AS total_revenue,
+       AVG(monthly_charges) AS avg_monthly
+FROM customer_churn
+GROUP BY churn;
+
+# Most profitable segment
+SELECT contract_type, SUM(total_charges) AS revenue
+FROM customer_churn
+GROUP BY contract_type
+ORDER BY revenue DESC;
+
+# KPI: Churn Rate
+SELECT 
+ROUND(SUM(CASE WHEN churn='Yes' THEN 1 ELSE 0 END)*100/COUNT(*),2) 
+AS churn_rate
+FROM customer_churn;
+
+
+
+
+
