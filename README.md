@@ -15,3 +15,23 @@ This project aims to:
 
 MySQL
 SQL ( Aggregations, GROUP BY, CASE Statements, Window Functions)
+
+📂 Dataset Overview
+
+The dataset includes customer-level information:
+
+*customer_id – Unique customer identifier
+
+*gender – Customer demographics
+
+*tenure – Customer lifetime (in months)
+
+*contract_type – Subscription type
+
+*monthly_charges – Monthly billing amount
+
+*total_charges – Total revenue generated
+
+*payment_method – Payment mode
+
+*churn – Customer status (Yes/No)
